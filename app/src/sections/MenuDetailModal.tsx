@@ -1,4 +1,4 @@
-import { X, Star } from 'lucide-react'
+import { X } from 'lucide-react'
 import type { MenuItem } from '../data/menuData'
 
 interface MenuDetailModalProps {
@@ -17,20 +17,14 @@ export default function MenuDetailModal({ item, onClose }: MenuDetailModalProps)
 
       {/* Modal */}
       <div
-        className="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-2xl animate-scale-in"
-        style={{
-          background: 'var(--bg-card)',
-          border: '1px solid var(--border)',
-          boxShadow: '0 10px 50px rgba(141,90,56,0.15)',
-        }}
+        className="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-2xl animate-scale-in bg-white border border-[rgba(139,94,60,0.1)] shadow-[rgba(139,94,60,0.2)_0px_25px_50px_-12px]"
       >
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 z-10 w-9 h-9 rounded-full flex items-center justify-center transition-all hover:bg-[var(--border)]"
-          style={{ background: 'var(--bg-card)', border: '1px solid var(--border)' }}
+          className="absolute top-4 right-4 z-10 w-9 h-9 rounded-full flex items-center justify-center transition-all hover:bg-[rgba(139,94,60,0.1)] bg-white border border-[rgba(139,94,60,0.1)]"
         >
-          <X className="w-4 h-4 text-[var(--cream-muted)]" />
+          <X className="w-4 h-4 text-[#5D4037]" />
         </button>
 
         <div className="grid md:grid-cols-2">
@@ -43,17 +37,16 @@ export default function MenuDetailModal({ item, onClose }: MenuDetailModalProps)
             />
             <div
               className="absolute inset-0"
-              style={{ background: 'linear-gradient(180deg, transparent 50%, var(--bg-darkest) 100%)' }}
+              style={{ background: 'linear-gradient(180deg, transparent 50%, #3E2723 100%)' }}
             />
             {item.isBestSeller && (
-              <div className="absolute top-4 left-4 px-3 py-1 bg-[var(--gold)] text-white text-[10px] font-bold rounded-full tracking-wide uppercase">
+              <div className="absolute top-4 left-4 px-3 py-1 bg-[#8B5E3C] text-white text-[10px] font-bold rounded-[20px] tracking-wide uppercase">
                 ⭐ Best Seller
               </div>
             )}
             {/* Category badge */}
             <div
-              className="absolute bottom-4 left-4 px-3 py-1 rounded-full text-xs text-[var(--cream-muted)]"
-              style={{ background: 'var(--bg-card)', border: '1px solid var(--border)' }}
+              className="absolute bottom-4 left-4 px-3 py-1 rounded-full text-xs text-[#5D4037] bg-white border border-[rgba(139,94,60,0.1)]"
             >
               {item.category}
             </div>
@@ -63,8 +56,7 @@ export default function MenuDetailModal({ item, onClose }: MenuDetailModalProps)
           <div className="p-6 sm:p-8 flex flex-col justify-between">
             <div>
               <h3
-                className="text-2xl sm:text-3xl font-semibold text-[var(--cream)] mb-3"
-                style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
+                className="text-2xl sm:text-3xl font-bold text-[#32261B] mb-3"
               >
                 {item.name}
               </h3>
@@ -94,33 +86,30 @@ export default function MenuDetailModal({ item, onClose }: MenuDetailModalProps)
                     </svg>
                   ))}
                 </div>
-                <span className="text-sm text-[#C4A882]/50">
+                <span className="text-sm text-[#5D4037]/60">
                   {item.rating} ({item.reviews} ulasan)
                 </span>
               </div>
 
               {/* Description */}
-              <p className="text-[#C4A882]/60 mb-6 leading-relaxed text-sm">
+              <p className="text-[#5D4037] mb-6 leading-relaxed text-sm">
                 {item.description}
               </p>
 
-              {/* Details */}
               <div className="grid grid-cols-2 gap-3 mb-6">
                 <div
-                  className="p-3 rounded-xl"
-                  style={{ background: 'var(--bg-mid)', border: '1px solid var(--border)' }}
+                  className="p-3 rounded-xl bg-[#FAF6F1] border border-[rgba(139,94,60,0.1)]"
                 >
-                  <p className="text-[var(--cream-faint)] text-xs mb-1">Kategori</p>
-                  <p className="text-[var(--cream)] text-sm font-semibold">{item.category}</p>
+                  <p className="text-[#8B5E3C] text-xs mb-1">Kategori</p>
+                  <p className="text-[#32261B] text-sm font-semibold">{item.category}</p>
                 </div>
                 <div
-                  className="p-3 rounded-xl"
-                  style={{ background: 'var(--bg-mid)', border: '1px solid var(--border)' }}
+                  className="p-3 rounded-xl bg-[#FAF6F1] border border-[rgba(139,94,60,0.1)]"
                 >
-                  <p className="text-[var(--cream-faint)] text-xs mb-1">Status</p>
+                  <p className="text-[#8B5E3C] text-xs mb-1">Status</p>
                   <span className="inline-flex items-center gap-1.5">
                     <span className="w-1.5 h-1.5 bg-green-500 rounded-full" />
-                    <span className="text-[var(--cream)] text-sm font-semibold">{item.status}</span>
+                    <span className="text-[#32261B] text-sm font-semibold">{item.status}</span>
                   </span>
                 </div>
               </div>
@@ -129,8 +118,7 @@ export default function MenuDetailModal({ item, onClose }: MenuDetailModalProps)
             {/* Price + CTA */}
             <div>
               <p
-                className="text-3xl font-bold text-[var(--gold)] mb-5"
-                style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
+                className="text-3xl font-bold text-[#8B5E3C] mb-5"
               >
                 Rp {item.price}
               </p>
@@ -138,7 +126,7 @@ export default function MenuDetailModal({ item, onClose }: MenuDetailModalProps)
                 href="https://wa.me/6287818475075"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 w-full py-3.5 rounded-xl text-sm font-semibold text-white bg-[var(--gold)] hover:bg-[var(--gold-light)] transition-all hover:-translate-y-0.5 shadow-md shadow-[var(--gold)]/10"
+                className="flex items-center justify-center gap-2 w-full py-3.5 rounded-[10px] text-sm font-semibold text-white bg-[#8B5E3C] hover:bg-[#7A4E2F] transition-all hover:-translate-y-0.5 shadow-md shadow-[rgba(139,94,60,0.3)]"
               >
                 💬 Pesan via WhatsApp
               </a>

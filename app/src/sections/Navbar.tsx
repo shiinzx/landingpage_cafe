@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Menu, X, Coffee } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -34,7 +34,7 @@ export default function Navbar() {
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           isScrolled
-            ? 'bg-[var(--bg-dark)]/90 backdrop-blur-xl shadow-sm border-b border-[var(--border)]'
+            ? 'bg-[#FAF6F1]/80 backdrop-blur-xl border-b border-[#E0D9D1]'
             : 'bg-transparent'
         }`}
       >
@@ -70,23 +70,21 @@ export default function Navbar() {
                 <path d="M2 16.5H16" stroke="url(#navCoffeeGrad)" strokeWidth="1.8" strokeLinecap="round" />
               </svg>
               <span
-                className="text-xl md:text-2xl text-[var(--cream)] font-bold tracking-tight"
-                style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
+                className="text-xl md:text-2xl text-[#32261B] font-bold tracking-tight"
               >
                 Ar'Seven Coffee
               </span>
             </button>
 
-            {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-8">
               {navLinks.map((link) => (
                 <button
                   key={link.id}
                   onClick={() => scrollToSection(link.id)}
-                  className="text-[var(--cream-muted)] hover:text-[var(--gold)] text-sm font-semibold tracking-wide transition-colors relative group"
+                  className="text-[#5D4037] hover:text-[#8B5E3C] hover:bg-[rgba(139,94,60,0.1)] px-4 py-2 rounded-lg text-base font-normal tracking-wide transition-all relative group"
                 >
                   {link.label}
-                  <span className="absolute -bottom-1 left-0 w-0 h-px bg-[var(--gold)] transition-all duration-300 group-hover:w-full" />
+                  <span className="absolute -bottom-1 left-0 w-0 h-px bg-[#8B5E3C] transition-all duration-300 group-hover:w-full" />
                 </button>
               ))}
             </div>
@@ -115,9 +113,8 @@ export default function Navbar() {
         />
       )}
 
-      {/* Mobile Menu Panel */}
       <div
-        className={`md:hidden fixed top-0 right-0 bottom-0 w-72 bg-[var(--bg-mid)] z-50 transform transition-transform duration-300 ease-in-out border-l border-[var(--border)] ${
+        className={`md:hidden fixed top-0 right-0 bottom-0 w-72 bg-[#FAF6F1] z-50 transform transition-transform duration-300 ease-in-out border-l border-[#E0D9D1] ${
           isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
@@ -144,8 +141,7 @@ export default function Navbar() {
               <path d="M2 16.5H16" stroke="url(#drawerCoffeeGrad)" strokeWidth="1.8" strokeLinecap="round" />
             </svg>
             <span
-              className="text-lg text-[var(--cream)] font-bold"
-              style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
+              className="text-lg text-[#32261B] font-bold"
             >
               Ar'Seven Coffee
             </span>
@@ -158,13 +154,12 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* Nav Links */}
         <div className="p-6 space-y-1">
           {navLinks.map((link, i) => (
             <button
               key={link.id}
               onClick={() => scrollToSection(link.id)}
-              className="block w-full text-left px-4 py-3 text-[var(--cream-muted)] hover:text-[var(--gold)] hover:bg-[var(--gold)]/5 rounded-xl font-semibold transition-colors text-sm tracking-wide"
+              className="block w-full text-left px-4 py-3 text-[#5D4037] hover:text-[#32261B] hover:bg-[rgba(139,94,60,0.1)] rounded-xl font-semibold transition-colors text-base tracking-wide"
               style={{ animationDelay: `${i * 0.05}s` }}
             >
               {link.label}
@@ -172,24 +167,22 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* Mobile CTA */}
         <div className="px-6">
           <a
             href="https://r.grab.com/g/6-20260512_094057_8d3f2fb5409f4deda59258445cda5087_MEXMPS-IDGFSTI000039oz"
             target="_blank"
             rel="noopener noreferrer"
-            className="block w-full py-3 bg-[var(--gold)] text-white rounded-xl font-bold text-center hover:bg-[var(--gold-light)] transition-colors text-sm shadow-md shadow-[var(--gold)]/10"
+            className="block w-full py-3 bg-[#8B5E3C] text-white rounded-[10px] font-normal text-center hover:bg-[#7A4E2F] transition-colors text-base shadow-md shadow-[rgba(139,94,60,0.3)]"
           >
             🛵 Pesan via GrabFood
           </a>
         </div>
 
-        {/* Hours info */}
         <div className="absolute bottom-8 left-6 right-6">
-          <div className="p-4 border border-[var(--border)] rounded-xl bg-[var(--bg-dark)]">
-            <p className="text-[var(--gold)] text-xs font-bold mb-2">Jam Buka</p>
-            <p className="text-[var(--cream-muted)] text-xs">Sen–Kam, Sab–Min: 09:00–02:00</p>
-            <p className="text-[var(--cream-muted)] text-xs">Jumat: 13:00–02:00</p>
+          <div className="p-4 border border-[#E0D9D1] rounded-xl bg-white shadow-sm">
+            <p className="text-[#8B5E3C] text-xs font-bold mb-2">Jam Buka</p>
+            <p className="text-[#5D4037] text-xs">Sen–Kam, Sab–Min: 09:00–02:00</p>
+            <p className="text-[#5D4037] text-xs">Jumat: 13:00–02:00</p>
           </div>
         </div>
       </div>

@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 
 /* ── Animated Ice Cream Coffee Illustration ── */
-function IceCreamCoffeeArt() {
+export function IceCreamCoffeeArt() {
   return (
     <div className="relative w-full max-w-[320px] sm:max-w-[380px] mx-auto aspect-square flex items-center justify-center">
 
@@ -9,13 +9,13 @@ function IceCreamCoffeeArt() {
       <div
         className="absolute inset-0 rounded-full animate-glow-pulse"
         style={{
-          background: 'radial-gradient(circle, rgba(201,150,59,0.12) 0%, transparent 70%)',
+          background: 'radial-gradient(circle, rgba(139,94,60,0.12) 0%, transparent 70%)',
         }}
       />
 
       {/* Rotating orbit ring */}
       <div
-        className="absolute w-[85%] h-[85%] rounded-full border border-[#C9963B]/10 animate-rotate-slow"
+        className="absolute w-[85%] h-[85%] rounded-full border border-[#D7A86E]/20 animate-rotate-slow"
         style={{ borderStyle: 'dashed' }}
       />
 
@@ -23,7 +23,7 @@ function IceCreamCoffeeArt() {
       {[...Array(6)].map((_, i) => (
         <div
           key={i}
-          className="absolute w-1.5 h-1.5 rounded-full bg-[#C9963B]/40 animate-bubble-rise"
+          className="absolute w-1.5 h-1.5 rounded-full bg-[#D7A86E]/40 animate-bubble-rise"
           style={{
             left: `${20 + i * 12}%`,
             bottom: `${20 + (i % 3) * 10}%`,
@@ -61,8 +61,8 @@ function IceCreamCoffeeArt() {
           <div
             className="relative w-[80px] h-[80px] rounded-[50%_50%_45%_45%] bg-gradient-to-br from-[#FFF0D0] via-[#F0C870] to-[#C98535] animate-ice-cream-melt z-10"
             style={{
-              animationDelay: '0s',
-              boxShadow: '0 4px 20px rgba(201,150,59,0.3), inset 0 -4px 8px rgba(0,0,0,0.1)',
+              animationDelay: '0.5s',
+              boxShadow: '0 4px 20px rgba(139,94,60,0.3), inset 0 -4px 8px rgba(0,0,0,0.1)',
             }}
           >
             {/* Shine highlight */}
@@ -83,8 +83,8 @@ function IceCreamCoffeeArt() {
             height: '150px',
             background: 'linear-gradient(180deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 100%)',
             borderRadius: '4px 4px 18px 18px',
-            border: '1.5px solid rgba(201,150,59,0.25)',
-            boxShadow: '0 8px 32px rgba(0,0,0,0.4), inset 0 0 20px rgba(201,150,59,0.03)',
+            border: '1.5px solid rgba(139,94,60,0.25)',
+            boxShadow: '0 8px 32px rgba(0,0,0,0.1), inset 0 0 20px rgba(139,94,60,0.03)',
           }}
         >
           {/* Coffee liquid layers */}
@@ -126,7 +126,7 @@ function IceCreamCoffeeArt() {
           {/* Dark coffee base */}
           <div
             className="absolute bottom-0 left-0 right-0 h-10"
-            style={{ background: 'linear-gradient(0deg, #0B0602 0%, #3D1F0A 100%)' }}
+            style={{ background: 'linear-gradient(0deg, #32261B 0%, #8B5E3C 100%)' }}
           />
 
           {/* Condensation drops on glass */}
@@ -155,8 +155,8 @@ function IceCreamCoffeeArt() {
         <div
           className="w-[130px] h-3 rounded-full mt-1"
           style={{
-            background: 'linear-gradient(180deg, rgba(201,150,59,0.2) 0%, rgba(201,150,59,0.05) 100%)',
-            border: '1px solid rgba(201,150,59,0.2)',
+            background: 'linear-gradient(180deg, rgba(139,94,60,0.2) 0%, rgba(139,94,60,0.05) 100%)',
+            border: '1px solid rgba(139,94,60,0.2)',
           }}
         />
 
@@ -168,7 +168,7 @@ function IceCreamCoffeeArt() {
               className="steam-line"
               style={{
                 animationDelay: `${i * 0.5}s`,
-                background: 'linear-gradient(to top, rgba(201,150,59,0.4), transparent)',
+                background: 'linear-gradient(to top, rgba(139,94,60,0.4), transparent)',
                 opacity: 0.5,
               }}
             />
@@ -197,20 +197,19 @@ export default function SignatureSection() {
     <section
       id="signature"
       ref={sectionRef}
-      className="relative py-20 sm:py-28 md:py-32 overflow-hidden"
-      style={{ background: 'linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-mid) 100%)' }}
+      className="relative py-20 sm:py-28 md:py-32 overflow-hidden bg-[#FAF6F1]"
     >
       {/* Noise */}
-      <div className="noise-overlay" />
+      <div className="noise-overlay opacity-[0.03]" />
 
       {/* Ambient blobs */}
       <div
-        className="absolute -left-40 top-1/3 w-[500px] h-[500px] rounded-full opacity-[0.07] pointer-events-none"
-        style={{ background: 'radial-gradient(circle, #C9963B, transparent 70%)' }}
+        className="absolute -left-40 top-1/3 w-[500px] h-[500px] rounded-full opacity-[0.05] pointer-events-none"
+        style={{ background: 'radial-gradient(circle, #8B5E3C, transparent 70%)' }}
       />
       <div
-        className="absolute -right-40 bottom-1/3 w-[400px] h-[400px] rounded-full opacity-[0.05] pointer-events-none"
-        style={{ background: 'radial-gradient(circle, #E8B86D, transparent 70%)' }}
+        className="absolute -right-40 bottom-1/3 w-[400px] h-[400px] rounded-full opacity-[0.03] pointer-events-none"
+        style={{ background: 'radial-gradient(circle, #D7A86E, transparent 70%)' }}
       />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -222,17 +221,16 @@ export default function SignatureSection() {
           }`}
         >
           <div className="inline-flex items-center gap-3 mb-5">
-            <div className="h-px w-8 bg-[#C9963B]/50" />
-            <span className="text-[#C9963B] text-xs tracking-[0.4em] uppercase font-medium">Ciri Khas Kami</span>
-            <div className="h-px w-8 bg-[#C9963B]/50" />
+            <div className="h-px w-8 bg-[#8B5E3C]/30" />
+            <span className="text-[#8B5E3C] text-xs tracking-[0.4em] uppercase font-bold">Ciri Khas Kami</span>
+            <div className="h-px w-8 bg-[#8B5E3C]/30" />
           </div>
           <h2
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[var(--cream)] mb-5 leading-tight"
-            style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontWeight: 600 }}
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#32261B] mb-5 leading-[1.0] font-bold"
           >
-            Setiap minuman <em className="text-[#C9963B]"> lebih sempurna dengan satu scoop.</em>
+            Setiap minuman <em className="text-[#8B5E3C] not-italic"> lebih sempurna dengan satu scoop.</em>
           </h2>
-          <p className="text-[#C4A882]/70 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
+          <p className="text-[#5D4037] text-sm sm:text-base max-w-xl mx-auto leading-[1.4]">
             Semua menu Minuman dingin kami hadir dengan sentuhan spesial: 1 scoop es krim yang diletakkan tepat di atas Minumanmu.
             Dingin bertemu dingin — tapi rasanya? Jauh lebih dari itu. Es krim yang perlahan meleleh berpadu dengan pahitnya kopi, menciptakan rasa yang creamy, segar, dan bikin nagih.
           </p>
@@ -256,11 +254,11 @@ export default function SignatureSection() {
             {/* Gradient fade top & bottom */}
             <div
               className="absolute inset-x-0 top-0 h-24 pointer-events-none"
-              style={{ background: 'linear-gradient(to bottom, var(--bg-dark) 0%, transparent 100%)' }}
+              style={{ background: 'linear-gradient(to bottom, #FAF6F1 0%, transparent 100%)' }}
             />
             <div
               className="absolute inset-x-0 bottom-0 h-24 pointer-events-none"
-              style={{ background: 'linear-gradient(to top, var(--bg-dark) 0%, transparent 100%)' }}
+              style={{ background: 'linear-gradient(to top, #FAF6F1 0%, transparent 100%)' }}
             />
           </div>
         </div>
@@ -276,9 +274,9 @@ export default function SignatureSection() {
             <div
               className="relative rounded-2xl overflow-hidden"
               style={{
-                border: '1px solid rgba(201,150,59,0.2)',
-                background: 'var(--bg-dark)',
-                boxShadow: '0 0 60px rgba(141,90,56,0.08), 0 24px 48px rgba(141,90,56,0.15)',
+                border: '1px solid rgba(139, 94, 60, 0.1)',
+                background: '#FFFFFF',
+                boxShadow: 'rgba(0, 0, 0, 0.05) 0px 1px 2px 0px',
               }}
             >
               <video
@@ -293,7 +291,7 @@ export default function SignatureSection() {
               {/* Gold border glow bottom */}
               <div
                 className="absolute inset-x-0 bottom-0 h-16 pointer-events-none"
-                style={{ background: 'linear-gradient(to top, rgba(201,150,59,0.08), transparent)' }}
+                style={{ background: 'linear-gradient(to top, rgba(139,94,60,0.08), transparent)' }}
               />
             </div>
           </div>
@@ -309,7 +307,7 @@ export default function SignatureSection() {
               {['Es Kopi Susu', 'Premium Blend', 'Best Seller', 'Must Try'].map((tag) => (
                 <span
                   key={tag}
-                  className="px-3 py-1 rounded-full text-xs font-medium text-[#C9963B] border border-[#C9963B]/30 bg-[#C9963B]/5"
+                  className="px-3 py-1 rounded-full text-xs font-medium text-[#8B5E3C] border border-[#8B5E3C]/20 bg-[#8B5E3C]/5"
                 >
                   {tag}
                 </span>
@@ -317,13 +315,12 @@ export default function SignatureSection() {
             </div>
 
             <h3
-              className="text-2xl sm:text-3xl text-[var(--cream)] leading-tight"
-              style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontWeight: 600 }}
+              className="text-2xl sm:text-3xl text-[#32261B] leading-tight font-bold"
             >
               Yang bikin Ar'Seven beda dari yang lain
             </h3>
 
-            <p className="text-[#C4A882]/70 text-sm sm:text-base leading-relaxed">
+            <p className="text-[#5D4037] text-sm sm:text-base leading-[1.4]">
               Kami percaya kopi yang nikmat tidak harus mahal. Kopi kami
               menggunakan biji kopi pilihan dari kebun lokal Cianjur, diseduh segar setiap hari,
               dan disajikan dengan satu scoop es krim vanilla yang meleleh perlahan — menciptakan
@@ -339,14 +336,13 @@ export default function SignatureSection() {
               ].map((item) => (
                 <li key={item.title} className="flex items-start gap-4">
                   <div
-                    className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 text-lg"
-                    style={{ background: 'rgba(201,150,59,0.1)', border: '1px solid rgba(201,150,59,0.15)' }}
+                    className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 text-lg bg-[#8B5E3C]/5 border border-[#8B5E3C]/10"
                   >
                     {item.icon}
                   </div>
                   <div>
-                    <p className="text-[var(--cream)] text-sm font-semibold mb-0.5">{item.title}</p>
-                    <p className="text-[#C4A882]/60 text-xs leading-relaxed">{item.desc}</p>
+                    <p className="text-[#32261B] text-sm font-semibold mb-0.5">{item.title}</p>
+                    <p className="text-[#5D4037] text-xs leading-relaxed">{item.desc}</p>
                   </div>
                 </li>
               ))}
@@ -358,13 +354,13 @@ export default function SignatureSection() {
                 href="https://wa.me/6287818475075"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-[#C9963B] text-[#0B0602] rounded-full font-semibold text-sm hover:bg-[#E8C170] transition-all hover:-translate-y-0.5 shadow-lg shadow-[#C9963B]/20"
+                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-[#8B5E3C] text-white rounded-[10px] font-normal text-sm hover:bg-[#7A4E2F] transition-all hover:-translate-y-0.5 shadow-md shadow-[rgba(139,94,60,0.3)]"
               >
                 <span>💬</span> Pesan via WhatsApp
               </a>
               <button
                 onClick={() => document.getElementById('menu')?.scrollIntoView({ behavior: 'smooth' })}
-                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 border border-[#C9963B]/30 text-[#C4A882] rounded-full font-medium text-sm hover:border-[#C9963B] hover:text-[#C9963B] transition-all"
+                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-white border border-[#8B5E3C]/30 text-[#8B5E3C] rounded-[9999px] font-semibold text-sm hover:bg-[#F5EBE0] hover:border-[#6B4427] hover:text-[#5D4037] transition-all"
               >
                 Lihat Menu Lainnya →
               </button>
@@ -386,16 +382,14 @@ export default function SignatureSection() {
           ].map((stat) => (
             <div
               key={stat.label}
-              className="text-center py-6 px-4 rounded-2xl"
-              style={{ background: 'rgba(201,150,59,0.04)', border: '1px solid rgba(201,150,59,0.1)' }}
+              className="text-center py-6 px-4 rounded-2xl bg-white border border-[rgba(139,94,60,0.1)] shadow-[rgba(0,0,0,0.05)_0px_1px_2px_0px]"
             >
               <p
-                className="text-2xl sm:text-3xl text-[#C9963B] mb-1 font-bold"
-                style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
+                className="text-2xl sm:text-3xl text-[#8B5E3C] mb-1 font-bold"
               >
                 {stat.value}
               </p>
-              <p className="text-[#C4A882]/60 text-xs sm:text-sm">{stat.label}</p>
+              <p className="text-[#5D4037] text-xs sm:text-sm">{stat.label}</p>
             </div>
           ))}
         </div>

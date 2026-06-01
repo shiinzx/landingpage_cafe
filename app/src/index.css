@@ -6,19 +6,19 @@
 
 @layer base {
   :root {
-    /* ── Dark Espresso Theme ── */
-    --bg-darkest:  #060301;
-    --bg-dark:     #0D0804;
-    --bg-mid:      #150B06;
-    --bg-card:     #1E1009;
-    --gold:        #C9963B;
-    --gold-light:  #D4A84D;
-    --gold-dim:    #7D5C20;
-    --cream:       #F5E6D3;
-    --cream-muted: #C4A882;
-    --cream-faint: #8A7060;
-    --border:      rgba(201,150,59,0.15);
-    --radius:      0.875rem;
+    /* ── Warm Espresso Light Theme ── */
+    --bg-darkest:  #3E2723; /* Deep Charcoal */
+    --bg-dark:     #E0D9D1; /* Off-White Cream - primary background */
+    --bg-mid:      #FAF6F1; /* Light Cream - secondary background */
+    --bg-card:     #FFFFFF; /* Pure White */
+    --gold:        #8B5E3C; /* Warm Espresso - primary interactive */
+    --gold-light:  #7A4E2F; /* Darker Warm Espresso */
+    --gold-dim:    #D7A86E; /* Coffee Accent */
+    --cream:       #32261B; /* Deep Brown */
+    --cream-muted: #5D4037; /* Dark Roast */
+    --cream-faint: #A0522D; /* Sienna */
+    --border:      rgba(139, 94, 60, 0.1);
+    --radius:      16px;
   }
 
   * {
@@ -35,9 +35,9 @@
   body {
     background-color: var(--bg-dark);
     color: var(--cream);
-    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     font-weight: 400;
-    line-height: 1.6;
+    line-height: 1.4;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
@@ -76,12 +76,12 @@
 
 /* ── Font Classes ── */
 .font-serif-elegant {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: ui-sans-serif, system-ui, sans-serif;
 }
 .font-display {
-  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-family: ui-sans-serif, system-ui, sans-serif;
   font-weight: 700;
-  letter-spacing: -0.02em;
+  letter-spacing: 0px;
 }
 
 /* ══════════════════════════════════════════
@@ -340,60 +340,68 @@
   border: 1px solid var(--border);
   border-radius: var(--radius);
   transition: border-color 0.25s, box-shadow 0.25s, transform 0.25s;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
 }
 .card-dark:hover {
-  border-color: rgba(201,150,59,0.35);
-  box-shadow: 0 8px 32px rgba(0,0,0,0.5), 0 0 0 1px rgba(201,150,59,0.15);
+  border-color: rgba(139, 94, 60, 0.2);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px;
   transform: translateY(-2px);
 }
 
 /* ══════════════════════════════════════════
    BUTTON STYLES
-══════════════════════════════════════════ */
+ ══════════════════════════════════════════ */
 .btn-gold {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  padding: 0.75rem 2rem;
+  padding: 14px 32px;
   background: var(--gold);
-  color: #fff;
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-weight: 700;
-  font-size: 0.875rem;
-  letter-spacing: 0.01em;
-  border-radius: 9999px;
-  border: none;
+  color: #ffffff;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0px;
+  border-radius: 10px;
+  border: 0px solid transparent;
   cursor: pointer;
-  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
-  box-shadow: 0 4px 20px rgba(201,150,59,0.25);
+  height: 48px;
+  line-height: 24px;
+  transition: all 0.2s;
+  box-shadow: rgba(139, 94, 60, 0.3) 0px 10px 15px -3px, rgba(139, 94, 60, 0.3) 0px 4px 6px -4px;
 }
 .btn-gold:hover {
   background: var(--gold-light);
   transform: translateY(-2px);
-  box-shadow: 0 8px 28px rgba(201,150,59,0.35);
+  box-shadow: rgba(139, 94, 60, 0.4) 0px 12px 18px -4px, rgba(139, 94, 60, 0.4) 0px 6px 8px -4px;
 }
-.btn-gold:active { transform: scale(0.97); }
+.btn-gold:active {
+  background: #6B4427;
+  transform: scale(0.97);
+}
 
 .btn-outline-gold {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  padding: 0.75rem 2rem;
-  background: transparent;
+  padding: 14px 32px;
+  background: #ffffff;
   color: var(--gold);
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-weight: 700;
-  font-size: 0.875rem;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 16px;
   border-radius: 9999px;
   border: 2px solid var(--gold);
   cursor: pointer;
-  transition: background 0.2s, color 0.2s, transform 0.2s;
+  height: 48px;
+  line-height: 24px;
+  transition: all 0.2s;
 }
 .btn-outline-gold:hover {
-  background: var(--gold);
-  color: #fff;
+  background: #F5EBE0;
+  border-color: #6B4427;
   transform: translateY(-2px);
 }
 
@@ -425,21 +433,46 @@ nav.scrolled {
    TYPOGRAPHY SCALE — RESPONSIVE
 ══════════════════════════════════════════ */
 
-/* Heading overrides — keep Cormorant for display headings  */
+/* Typography Rules */
 h1, h2, h3, h4 {
-  line-height: 1.15;
-  letter-spacing: -0.01em;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: 0px;
+  margin: 0;
 }
-h1 { font-size: clamp(2.2rem, 6vw, 4.5rem); font-weight: 800; }
-h2 { font-size: clamp(1.8rem, 4vw, 3rem);   font-weight: 700; }
-h3 { font-size: clamp(1.2rem, 2.5vw, 1.6rem); font-weight: 600; }
+h1 {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 60px;
+}
+h2 {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 40px;
+}
+h3 {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 28px;
+}
+p {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+}
 
-p  { line-height: 1.7; }
-
-/* Fluid body text */
-@media (max-width: 480px) {
-  body { font-size: 15px; }
-  h1   { letter-spacing: -0.02em; }
+@media (max-width: 639px) {
+  h1 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  h2 {
+    font-size: 28px;
+    line-height: 32px;
+  }
+  p {
+    font-size: 18px;
+    line-height: 26px;
+  }
 }
 
 /* ══════════════════════════════════════════
