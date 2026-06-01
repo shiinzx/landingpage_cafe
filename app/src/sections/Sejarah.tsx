@@ -158,7 +158,7 @@ export default function Sejarah() {
                 style={{ background: 'linear-gradient(180deg, transparent 50%, #3E2723 100%)' }}
               />
               <img
-                src="/about-interior.jpg"
+                src="/image.png"
                 alt="Interior Ar'Seven Coffee Corner"
                 className="w-full aspect-video sm:aspect-[4/3] lg:aspect-video object-cover"
               />
