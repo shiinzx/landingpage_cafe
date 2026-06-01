@@ -238,6 +238,7 @@
 .animate-slide-in-left  { animation: slideInLeft 0.7s ease-out forwards; }
 .animate-slide-in-right { animation: slideInRight 0.7s ease-out forwards; }
 .animate-scale-in       { animation: scaleIn 0.5s ease-out forwards; }
+.animate-coffee-bean-float { animation: coffeeBeanFloat var(--duration, 8s) ease-in-out infinite; }
 
 /* ══════════════════════════════════════════
    COMPONENT UTILITIES
