@@ -576,3 +576,27 @@ img {
   }
   .map-embed iframe { position: relative; height: 100%; }
 }
+
+/* ══════════════════════════════════════════
+   COFFEE SPLASH RISE UP ANIMATION
+   ══════════════════════════════════════════ */
+@keyframes coffeeRiseUp {
+  0% {
+    transform: translateY(140%) scale(0.5) rotate(var(--start-rot, 0deg));
+    opacity: 0;
+  }
+  15% {
+    opacity: var(--max-opacity, 0.08);
+  }
+  85% {
+    opacity: var(--max-opacity, 0.08);
+  }
+  100% {
+    transform: translateY(-140%) scale(1.2) rotate(var(--end-rot, 360deg));
+    opacity: 0;
+  }
+}
+
+.animate-coffee-rise {
+  animation: coffeeRiseUp var(--duration, 12s) linear infinite;
+}

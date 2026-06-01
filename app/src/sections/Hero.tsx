@@ -40,16 +40,18 @@ const CoffeeDrop = ({
   style,
   className = '',
   opacity = '0.06',
+  animationClass = 'animate-coffee-bean-float',
 }: {
   style?: React.CSSProperties
   className?: string
   opacity?: string
+  animationClass?: string
 }) => (
   <svg
     viewBox="0 0 24 24"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    className={`animate-coffee-bean-float pointer-events-none select-none z-0 ${className}`}
+    className={`${animationClass} pointer-events-none select-none z-0 ${className}`}
     style={style}
   >
     <path
@@ -64,16 +66,18 @@ const CoffeeSplash = ({
   style,
   className = '',
   opacity = '0.06',
+  animationClass = 'animate-float-slow',
 }: {
   style?: React.CSSProperties
   className?: string
   opacity?: string
+  animationClass?: string
 }) => (
   <svg
     viewBox="0 0 120 120"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    className={`animate-float-slow pointer-events-none select-none z-0 ${className}`}
+    className={`${animationClass} pointer-events-none select-none z-0 ${className}`}
     style={style}
   >
     {/* Elegant liquid splash curves */}
@@ -118,10 +122,20 @@ export default function Hero() {
       <CoffeeSplash className="absolute sm:block hidden" style={{ top: '65%', right: '28%', width: '180px', height: '180px', '--duration': '12s', animationDelay: '2s' } as React.CSSProperties} opacity="0.04" />
       <CoffeeSplash className="absolute md:block hidden" style={{ top: '40%', left: '2%', width: '120px', height: '120px', '--duration': '10s', animationDelay: '1s' } as React.CSSProperties} opacity="0.04" />
 
+      {/* Coffee Splashes rising up from bottom to top */}
+      <CoffeeSplash className="absolute animate-coffee-rise" style={{ left: '10%', width: '150px', height: '150px', '--duration': '14s', '--start-rot': '45deg', '--end-rot': '180deg', '--max-opacity': '0.05' } as React.CSSProperties} opacity="0.05" animationClass="animate-coffee-rise" />
+      <CoffeeSplash className="absolute sm:block hidden animate-coffee-rise" style={{ left: '55%', width: '170px', height: '170px', '--duration': '17s', '--start-rot': '-30deg', '--end-rot': '90deg', '--max-opacity': '0.04', animationDelay: '3s' } as React.CSSProperties} opacity="0.04" animationClass="animate-coffee-rise" />
+      <CoffeeSplash className="absolute md:block hidden animate-coffee-rise" style={{ left: '85%', width: '130px', height: '130px', '--duration': '12s', '--start-rot': '15deg', '--end-rot': '270deg', '--max-opacity': '0.05', animationDelay: '1.5s' } as React.CSSProperties} opacity="0.05" animationClass="animate-coffee-rise" />
+
       {/* Floating Coffee Drops in background */}
       <CoffeeDrop className="absolute" style={{ top: '5%', left: '18%', width: '28px', height: '28px', '--rot': '12deg', '--duration': '6s', animationDelay: '0.5s' } as React.CSSProperties} opacity="0.07" />
       <CoffeeDrop className="absolute md:block hidden" style={{ top: '45%', right: '5%', width: '36px', height: '36px', '--rot': '-25deg', '--duration': '8s', animationDelay: '2.5s' } as React.CSSProperties} opacity="0.06" />
       <CoffeeDrop className="absolute sm:block hidden" style={{ top: '80%', left: '32%', width: '24px', height: '24px', '--rot': '40deg', '--duration': '7s', animationDelay: '1.2s' } as React.CSSProperties} opacity="0.08" />
+
+      {/* Coffee Drops rising up from bottom to top */}
+      <CoffeeDrop className="absolute animate-coffee-rise" style={{ left: '30%', width: '32px', height: '32px', '--duration': '11s', '--max-opacity': '0.08', animationDelay: '0.8s' } as React.CSSProperties} opacity="0.08" animationClass="animate-coffee-rise" />
+      <CoffeeDrop className="absolute sm:block hidden animate-coffee-rise" style={{ left: '42%', width: '40px', height: '40px', '--duration': '13s', '--max-opacity': '0.06', animationDelay: '4s' } as React.CSSProperties} opacity="0.06" animationClass="animate-coffee-rise" />
+      <CoffeeDrop className="absolute md:block hidden animate-coffee-rise" style={{ left: '72%', width: '36px', height: '36px', '--duration': '9s', '--max-opacity': '0.07', animationDelay: '2.2s' } as React.CSSProperties} opacity="0.07" animationClass="animate-coffee-rise" />
 
       {/* Floating Coffee Beans in background - Left Side */}
       <CoffeeBean className="absolute" style={{ top: '8%', left: '4%', width: '96px', height: '96px', '--rot': '15deg', '--duration': '12s' } as React.CSSProperties} opacity="0.08" crackOpacity="0.12" />
