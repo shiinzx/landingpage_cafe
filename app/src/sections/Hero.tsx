@@ -4,8 +4,8 @@ import { ChevronDown } from 'lucide-react'
 const CoffeeBean = ({
   style,
   className = '',
-  opacity = '0.06',
-  crackOpacity = '0.1',
+  opacity = '0.18',
+  crackOpacity = '0.28',
 }: {
   style?: React.CSSProperties
   className?: string
@@ -39,7 +39,7 @@ const CoffeeBean = ({
 const CoffeeDrop = ({
   style,
   className = '',
-  opacity = '0.06',
+  opacity = '0.18',
   animationClass = 'animate-coffee-bean-float',
 }: {
   style?: React.CSSProperties
@@ -65,7 +65,7 @@ const CoffeeDrop = ({
 const CoffeeSplash = ({
   style,
   className = '',
-  opacity = '0.06',
+  opacity = '0.16',
   animationClass = 'animate-float-slow',
 }: {
   style?: React.CSSProperties
@@ -118,46 +118,46 @@ export default function Hero() {
       <div className="noise-overlay opacity-[0.03]" />
 
       {/* Floating Coffee Splashes in background */}
-      <CoffeeSplash className="absolute" style={{ top: '15%', left: '25%', width: '140px', height: '140px', '--duration': '9s' } as React.CSSProperties} opacity="0.05" />
-      <CoffeeSplash className="absolute sm:block hidden" style={{ top: '65%', right: '28%', width: '180px', height: '180px', '--duration': '12s', animationDelay: '2s' } as React.CSSProperties} opacity="0.04" />
-      <CoffeeSplash className="absolute md:block hidden" style={{ top: '40%', left: '2%', width: '120px', height: '120px', '--duration': '10s', animationDelay: '1s' } as React.CSSProperties} opacity="0.04" />
+      <CoffeeSplash className="absolute" style={{ top: '15%', left: '25%', width: '140px', height: '140px', '--duration': '9s' } as React.CSSProperties} opacity="0.14" />
+      <CoffeeSplash className="absolute sm:block hidden" style={{ top: '65%', right: '28%', width: '180px', height: '180px', '--duration': '12s', animationDelay: '2s' } as React.CSSProperties} opacity="0.12" />
+      <CoffeeSplash className="absolute md:block hidden" style={{ top: '40%', left: '2%', width: '120px', height: '120px', '--duration': '10s', animationDelay: '1s' } as React.CSSProperties} opacity="0.12" />
 
       {/* Coffee Splashes rising up from bottom to top */}
-      <CoffeeSplash className="absolute animate-coffee-rise" style={{ left: '10%', width: '150px', height: '150px', '--duration': '14s', '--start-rot': '45deg', '--end-rot': '180deg', '--max-opacity': '0.05' } as React.CSSProperties} opacity="0.05" animationClass="animate-coffee-rise" />
-      <CoffeeSplash className="absolute sm:block hidden animate-coffee-rise" style={{ left: '55%', width: '170px', height: '170px', '--duration': '17s', '--start-rot': '-30deg', '--end-rot': '90deg', '--max-opacity': '0.04', animationDelay: '3s' } as React.CSSProperties} opacity="0.04" animationClass="animate-coffee-rise" />
-      <CoffeeSplash className="absolute md:block hidden animate-coffee-rise" style={{ left: '85%', width: '130px', height: '130px', '--duration': '12s', '--start-rot': '15deg', '--end-rot': '270deg', '--max-opacity': '0.05', animationDelay: '1.5s' } as React.CSSProperties} opacity="0.05" animationClass="animate-coffee-rise" />
+      <CoffeeSplash className="absolute animate-coffee-rise" style={{ left: '10%', width: '150px', height: '150px', '--duration': '14s', '--start-rot': '45deg', '--end-rot': '180deg', '--max-opacity': '0.16' } as React.CSSProperties} opacity="0.16" animationClass="animate-coffee-rise" />
+      <CoffeeSplash className="absolute sm:block hidden animate-coffee-rise" style={{ left: '55%', width: '170px', height: '170px', '--duration': '17s', '--start-rot': '-30deg', '--end-rot': '90deg', '--max-opacity': '0.14', animationDelay: '3s' } as React.CSSProperties} opacity="0.14" animationClass="animate-coffee-rise" />
+      <CoffeeSplash className="absolute md:block hidden animate-coffee-rise" style={{ left: '85%', width: '130px', height: '130px', '--duration': '12s', '--start-rot': '15deg', '--end-rot': '270deg', '--max-opacity': '0.16', animationDelay: '1.5s' } as React.CSSProperties} opacity="0.16" animationClass="animate-coffee-rise" />
 
       {/* Floating Coffee Drops in background */}
-      <CoffeeDrop className="absolute" style={{ top: '5%', left: '18%', width: '28px', height: '28px', '--rot': '12deg', '--duration': '6s', animationDelay: '0.5s' } as React.CSSProperties} opacity="0.07" />
-      <CoffeeDrop className="absolute md:block hidden" style={{ top: '45%', right: '5%', width: '36px', height: '36px', '--rot': '-25deg', '--duration': '8s', animationDelay: '2.5s' } as React.CSSProperties} opacity="0.06" />
-      <CoffeeDrop className="absolute sm:block hidden" style={{ top: '80%', left: '32%', width: '24px', height: '24px', '--rot': '40deg', '--duration': '7s', animationDelay: '1.2s' } as React.CSSProperties} opacity="0.08" />
+      <CoffeeDrop className="absolute" style={{ top: '5%', left: '18%', width: '28px', height: '28px', '--rot': '12deg', '--duration': '6s', animationDelay: '0.5s' } as React.CSSProperties} opacity="0.18" />
+      <CoffeeDrop className="absolute md:block hidden" style={{ top: '45%', right: '5%', width: '36px', height: '36px', '--rot': '-25deg', '--duration': '8s', animationDelay: '2.5s' } as React.CSSProperties} opacity="0.16" />
+      <CoffeeDrop className="absolute sm:block hidden" style={{ top: '80%', left: '32%', width: '24px', height: '24px', '--rot': '40deg', '--duration': '7s', animationDelay: '1.2s' } as React.CSSProperties} opacity="0.20" />
 
       {/* Coffee Drops rising up from bottom to top */}
-      <CoffeeDrop className="absolute animate-coffee-rise" style={{ left: '30%', width: '32px', height: '32px', '--duration': '11s', '--max-opacity': '0.08', animationDelay: '0.8s' } as React.CSSProperties} opacity="0.08" animationClass="animate-coffee-rise" />
-      <CoffeeDrop className="absolute sm:block hidden animate-coffee-rise" style={{ left: '42%', width: '40px', height: '40px', '--duration': '13s', '--max-opacity': '0.06', animationDelay: '4s' } as React.CSSProperties} opacity="0.06" animationClass="animate-coffee-rise" />
-      <CoffeeDrop className="absolute md:block hidden animate-coffee-rise" style={{ left: '72%', width: '36px', height: '36px', '--duration': '9s', '--max-opacity': '0.07', animationDelay: '2.2s' } as React.CSSProperties} opacity="0.07" animationClass="animate-coffee-rise" />
+      <CoffeeDrop className="absolute animate-coffee-rise" style={{ left: '30%', width: '32px', height: '32px', '--duration': '11s', '--max-opacity': '0.20', animationDelay: '0.8s' } as React.CSSProperties} opacity="0.20" animationClass="animate-coffee-rise" />
+      <CoffeeDrop className="absolute sm:block hidden animate-coffee-rise" style={{ left: '42%', width: '40px', height: '40px', '--duration': '13s', '--max-opacity': '0.16', animationDelay: '4s' } as React.CSSProperties} opacity="0.16" animationClass="animate-coffee-rise" />
+      <CoffeeDrop className="absolute md:block hidden animate-coffee-rise" style={{ left: '72%', width: '36px', height: '36px', '--duration': '9s', '--max-opacity': '0.18', animationDelay: '2.2s' } as React.CSSProperties} opacity="0.18" animationClass="animate-coffee-rise" />
 
       {/* Floating Coffee Beans in background - Left Side */}
-      <CoffeeBean className="absolute" style={{ top: '8%', left: '4%', width: '96px', height: '96px', '--rot': '15deg', '--duration': '12s' } as React.CSSProperties} opacity="0.08" crackOpacity="0.12" />
-      <CoffeeBean className="absolute sm:block hidden" style={{ top: '20%', left: '15%', width: '64px', height: '64px', '--rot': '45deg', '--duration': '9s', animationDelay: '1s' } as React.CSSProperties} opacity="0.06" crackOpacity="0.09" />
-      <CoffeeBean className="absolute md:block hidden" style={{ top: '32%', left: '8%', width: '84px', height: '84px', '--rot': '-20deg', '--duration': '11s', animationDelay: '0.5s' } as React.CSSProperties} opacity="0.07" crackOpacity="0.1" />
-      <CoffeeBean className="absolute" style={{ top: '48%', left: '20%', width: '60px', height: '60px', '--rot': '75deg', '--duration': '7s', animationDelay: '1.5s' } as React.CSSProperties} opacity="0.09" crackOpacity="0.14" />
-      <CoffeeBean className="absolute sm:block hidden" style={{ top: '62%', left: '6%', width: '76px', height: '76px', '--rot': '120deg', '--duration': '10s', animationDelay: '2s' } as React.CSSProperties} opacity="0.05" crackOpacity="0.08" />
-      <CoffeeBean className="absolute md:block hidden" style={{ top: '78%', left: '14%', width: '68px', height: '68px', '--rot': '-40deg', '--duration': '8s', animationDelay: '0.8s' } as React.CSSProperties} opacity="0.08" crackOpacity="0.12" />
-      <CoffeeBean className="absolute" style={{ top: '90%', left: '3%', width: '88px', height: '88px', '--rot': '10deg', '--duration': '13s', animationDelay: '1.2s' } as React.CSSProperties} opacity="0.06" crackOpacity="0.09" />
+      <CoffeeBean className="absolute" style={{ top: '8%', left: '4%', width: '96px', height: '96px', '--rot': '15deg', '--duration': '12s' } as React.CSSProperties} opacity="0.20" crackOpacity="0.30" />
+      <CoffeeBean className="absolute sm:block hidden" style={{ top: '20%', left: '15%', width: '64px', height: '64px', '--rot': '45deg', '--duration': '9s', animationDelay: '1s' } as React.CSSProperties} opacity="0.16" crackOpacity="0.24" />
+      <CoffeeBean className="absolute md:block hidden" style={{ top: '32%', left: '8%', width: '84px', height: '84px', '--rot': '-20deg', '--duration': '11s', animationDelay: '0.5s' } as React.CSSProperties} opacity="0.18" crackOpacity="0.28" />
+      <CoffeeBean className="absolute" style={{ top: '48%', left: '20%', width: '60px', height: '60px', '--rot': '75deg', '--duration': '7s', animationDelay: '1.5s' } as React.CSSProperties} opacity="0.22" crackOpacity="0.34" />
+      <CoffeeBean className="absolute sm:block hidden" style={{ top: '62%', left: '6%', width: '76px', height: '76px', '--rot': '120deg', '--duration': '10s', animationDelay: '2s' } as React.CSSProperties} opacity="0.14" crackOpacity="0.22" />
+      <CoffeeBean className="absolute md:block hidden" style={{ top: '78%', left: '14%', width: '68px', height: '68px', '--rot': '-40deg', '--duration': '8s', animationDelay: '0.8s' } as React.CSSProperties} opacity="0.20" crackOpacity="0.30" />
+      <CoffeeBean className="absolute" style={{ top: '90%', left: '3%', width: '88px', height: '88px', '--rot': '10deg', '--duration': '13s', animationDelay: '1.2s' } as React.CSSProperties} opacity="0.16" crackOpacity="0.24" />
 
       {/* Floating Coffee Beans in background - Right Side */}
-      <CoffeeBean className="absolute" style={{ top: '10%', right: '14%', width: '104px', height: '104px', '--rot': '35deg', '--duration': '10s', animationDelay: '2.5s' } as React.CSSProperties} opacity="0.07" crackOpacity="0.11" />
-      <CoffeeBean className="absolute md:block hidden" style={{ top: '22%', right: '6%', width: '72px', height: '72px', '--rot': '-65deg', '--duration': '11s', animationDelay: '0.2s' } as React.CSSProperties} opacity="0.06" crackOpacity="0.09" />
-      <CoffeeBean className="absolute" style={{ top: '36%', right: '20%', width: '64px', height: '64px', '--rot': '80deg', '--duration': '8s', animationDelay: '1.8s' } as React.CSSProperties} opacity="0.09" crackOpacity="0.13" />
-      <CoffeeBean className="absolute sm:block hidden" style={{ top: '48%', right: '10%', width: '80px', height: '80px', '--rot': '-15deg', '--duration': '9.5s', animationDelay: '0.7s' } as React.CSSProperties} opacity="0.07" crackOpacity="0.1" />
-      <CoffeeBean className="absolute md:block hidden" style={{ top: '60%', right: '24%', width: '70px', height: '70px', '--rot': '105deg', '--duration': '7.5s', animationDelay: '2.2s' } as React.CSSProperties} opacity="0.08" crackOpacity="0.12" />
-      <CoffeeBean className="absolute" style={{ top: '74%', right: '12%', width: '92px', height: '92px', '--rot': '-45deg', '--duration': '11.5s', animationDelay: '1.4s' } as React.CSSProperties} opacity="0.05" crackOpacity="0.08" />
-      <CoffeeBean className="absolute sm:block hidden" style={{ top: '88%', right: '4%', width: '64px', height: '64px', '--rot': '95deg', '--duration': '8.5s', animationDelay: '0.9s' } as React.CSSProperties} opacity="0.07" crackOpacity="0.11" />
+      <CoffeeBean className="absolute" style={{ top: '10%', right: '14%', width: '104px', height: '104px', '--rot': '35deg', '--duration': '10s', animationDelay: '2.5s' } as React.CSSProperties} opacity="0.18" crackOpacity="0.28" />
+      <CoffeeBean className="absolute md:block hidden" style={{ top: '22%', right: '6%', width: '72px', height: '72px', '--rot': '-65deg', '--duration': '11s', animationDelay: '0.2s' } as React.CSSProperties} opacity="0.16" crackOpacity="0.24" />
+      <CoffeeBean className="absolute" style={{ top: '36%', right: '20%', width: '64px', height: '64px', '--rot': '80deg', '--duration': '8s', animationDelay: '1.8s' } as React.CSSProperties} opacity="0.22" crackOpacity="0.32" />
+      <CoffeeBean className="absolute sm:block hidden" style={{ top: '48%', right: '10%', width: '80px', height: '80px', '--rot': '-15deg', '--duration': '9.5s', animationDelay: '0.7s' } as React.CSSProperties} opacity="0.18" crackOpacity="0.26" />
+      <CoffeeBean className="absolute md:block hidden" style={{ top: '60%', right: '24%', width: '70px', height: '70px', '--rot': '105deg', '--duration': '7.5s', animationDelay: '2.2s' } as React.CSSProperties} opacity="0.20" crackOpacity="0.30" />
+      <CoffeeBean className="absolute" style={{ top: '74%', right: '12%', width: '92px', height: '92px', '--rot': '-45deg', '--duration': '11.5s', animationDelay: '1.4s' } as React.CSSProperties} opacity="0.14" crackOpacity="0.22" />
+      <CoffeeBean className="absolute sm:block hidden" style={{ top: '88%', right: '4%', width: '64px', height: '64px', '--rot': '95deg', '--duration': '8.5s', animationDelay: '0.9s' } as React.CSSProperties} opacity="0.18" crackOpacity="0.28" />
 
       {/* Floating Coffee Beans in background - Middle/Center */}
-      <CoffeeBean className="absolute lg:block hidden" style={{ top: '5%', left: '45%', width: '56px', height: '56px', '--rot': '50deg', '--duration': '9s', animationDelay: '3s' } as React.CSSProperties} opacity="0.05" crackOpacity="0.07" />
-      <CoffeeBean className="absolute lg:block hidden" style={{ top: '85%', left: '50%', width: '78px', height: '78px', '--rot': '-70deg', '--duration': '10.5s', animationDelay: '1.6s' } as React.CSSProperties} opacity="0.06" crackOpacity="0.09" />
+      <CoffeeBean className="absolute lg:block hidden" style={{ top: '5%', left: '45%', width: '56px', height: '56px', '--rot': '50deg', '--duration': '9s', animationDelay: '3s' } as React.CSSProperties} opacity="0.14" crackOpacity="0.22" />
+      <CoffeeBean className="absolute lg:block hidden" style={{ top: '85%', left: '50%', width: '78px', height: '78px', '--rot': '-70deg', '--duration': '10.5s', animationDelay: '1.6s' } as React.CSSProperties} opacity="0.16" crackOpacity="0.24" />
 
       <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center z-10">
         
