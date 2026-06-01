@@ -115,7 +115,7 @@ export default function Kontak() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {/* WhatsApp */}
               <a
-                href="https://wa.me/6287818475075"
+                href="https://wa.me/6281927737777"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group p-5 rounded-2xl flex flex-col bg-white border border-[rgba(139,94,60,0.1)] shadow-[rgba(0,0,0,0.05)_0px_1px_2px_0px] transition-all hover:-translate-y-0.5"
@@ -126,7 +126,7 @@ export default function Kontak() {
                   </div>
                   <h4 className="text-sm font-semibold text-[#32261B]">WhatsApp</h4>
                 </div>
-                <p className="text-[#5D4037] text-sm mb-2">087818475075</p>
+                <p className="text-[#5D4037] text-sm mb-2">0819-2773-7777</p>
                 <span className="inline-flex items-center gap-1 text-xs text-green-600 font-medium mt-auto">
                   Chat sekarang <ExternalLink className="w-3 h-3" />
                 </span>

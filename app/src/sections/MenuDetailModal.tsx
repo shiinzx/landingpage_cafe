@@ -123,7 +123,7 @@ export default function MenuDetailModal({ item, onClose }: MenuDetailModalProps)
                 Rp {item.price}
               </p>
               <a
-                href="https://wa.me/6287818475075"
+                href="https://wa.me/6281927737777"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 w-full py-3.5 rounded-[10px] text-sm font-semibold text-white bg-[#8B5E3C] hover:bg-[#7A4E2F] transition-all hover:-translate-y-0.5 shadow-md shadow-[rgba(139,94,60,0.3)]"
